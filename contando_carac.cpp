@@ -1,19 +1,6 @@
-/*#include <iostream>
-
-int Cont_caract(char F[], char letra){
-    int cont{};
-    if()
-}
-
-int main(){
-    char frase[100];
-    std::cin.getline(frase, 100);
-    char caractere;
-    std::cin >> caractere;
-
-    Cont_caract(frase, caractere);
-
-}*/
+/*Essa atividade implementa uma função recursiva chamada 
+contaCaracteres que conta quantas vezes um caractere específico aparece em uma string.
+*/
 
 #include <iostream>
 #include <string>
