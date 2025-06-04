@@ -1,3 +1,8 @@
+/*Essa atividade declara uma estrutura Aluno com matrícula, nome e nota. 
+Na main, o programa lê a quantidade de alunos e armazena suas informações em um array.
+Depois, lê uma matrícula e busca no array o aluno correspondente. Se encontrar, 
+imprime o nome e a nota com uma casa decimal, se não encontrar, exibe a mensagem "NAO ENCONTRADA".*/
+
 #include <iostream>
 #include <iomanip>
 
