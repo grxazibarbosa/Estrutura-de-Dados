@@ -1,3 +1,24 @@
+//struct que define Node 
+/*#ifndef NODE_H
+#define NODE_H
+
+struct Node{
+    int value;
+    Node * next {nullptr};
+    Node * anterior {nullptr};
+
+    Node(int value, Node* next = nullptr, Node* anterior = nullptr){
+        int value = value;
+        next = next;
+        anterior = anterior;
+    }
+
+};
+
+#endif
+
+*/
+
 #ifndef LIST_H
 #define LIST_H
 #include "Node.h" //para usar Node
