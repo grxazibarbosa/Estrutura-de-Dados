@@ -1,3 +1,8 @@
+/*Essa atividade define uma estrutura chamada Aluno com os campos nome, matrícula, 
+disciplina e nota. Os dados de um aluno são lidos e passados ​​para a função
+avaliada, que verifica se a nota é maior ou igual a 7. Se for, o aluno é considerado aprovado e caso contrário, 
+o aluno é considerado reprovado.*/
+
 #include <iostream>
 #include <iomanip>
 
