@@ -1,3 +1,10 @@
+/*Essa atividade define uma classe caixa que representa um objeto tridimensional com 
+atributos privados: largura, altura e comprimento. A classe possui um construtor que exibe uma mensagem 
+ao criar um objeto. Tem métodos get e set para acessar e modificar os atributos, com validações para 
+garantir que os valores sejam positivos. Também há um método volume quecalcula o volume da caixa.
+
+*/
+
 #include <iostream>
 class caixa{
     private:
@@ -11,7 +18,7 @@ class caixa{
         }
 
         int volume(int largura, int comprimento, int altura){
-            return largura * comprimento * largura;
+            return largura * comprimento * altura;
         }
 
         int get_largura(){
