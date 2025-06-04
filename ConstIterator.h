@@ -34,7 +34,6 @@ public:
         m_pointer = m_pointer->next;
         return *this;
     }
-    
 
     // Sobrecarga do operador de pós-incremento
     ConstIterator operator++(int) {

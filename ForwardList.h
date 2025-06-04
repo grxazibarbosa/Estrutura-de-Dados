@@ -196,25 +196,22 @@ public:
     // essa funcao com o valor 4, a lista resultante sera [1,2,3].
     // Nao esqueca de liberar os nos.
     void remove(int value){
-        if(m_size >= 1){
-            Node* aux = m_head->next;
-            Node* aux_anterior = m_head;
+        if (m_size >= 1) {
+            Node* aux = m_head->next;   
+            Node* aux_anterior = m_head;   
 
-            while(aux != nullptr){
-                if(aux->value == value){
-                    Node* proximo = aux->next; //guarda o proximo que o atual aponta
-                    Node* atual = aux; //guarda o atual a ser deletado
-                    aux_anterior->next = proximo; //o anterior ao atual aponta para o no que o atual aponta;
-                    //nó atual a ser deletado esta desconectado da lista
-                    //deleto o atual
-                    delete atual;
-                    m_size--;
+            while (aux != nullptr) {
+                if (aux->value == value) {
+                    Node* atual = aux;           
+                    aux_anterior->next = aux->next; 
+                    aux = aux->next;           
+                    delete atual;             
+                    m_size--;                   
+                } else {
+                    aux_anterior = aux;         
+                    aux = aux->next;        
                 }
-                //ando na lista
-                aux = aux->next;
-                aux_anterior = aux_anterior->next;
             }
-            
         }
     }
 
@@ -249,23 +246,23 @@ public:
     // funcao SEM ALOCAR NOVOS NODES. Eh possivel fazer essa funcao sem 
     // alocar novos nos. Voce precisara apenas de tres ponteiros adicionais 
     // para te ajudar a reverter a sua lista.
-    void reverse(){
-        if(m_size > 1){
-            Node* aux1 = m_head;
-            Node* aux2 = m_head->next;
-            Node* aux3 = m_head->next->next;
-
-            while(aux3 != nullptr){
-                aux2->next = aux1;
-                aux1 = aux2;
-                aux2 = aux3;
-                aux3 = aux3->next;
+    void reverse() {
+        if (m_size > 1) {
+            Node* anterior = nullptr;    
+            Node* atual = m_head->next; 
+            Node* proximo = nullptr;    
+    
+            while (atual != nullptr) {
+                proximo = atual->next;   
+                atual->next = anterior; 
+                anterior = atual;       
+                atual = proximo;       
             }
-            aux2->next = aux1;
-            m_head->next->next = nullptr;
-            m_head = aux2;
-        }
+
+        m_head->next = anterior; 
     }
+}
+
 
 
 
