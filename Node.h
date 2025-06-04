@@ -1,17 +1,18 @@
-// NAO MEXA NESTE ARQUIVO, ELE JA ESTA PRONTO PARA SER USADO PELO MOODLE
 #ifndef NODE_H
 #define NODE_H
-#include <iostream>
 
-struct Node {
-    int value; // variavel que guarda o valor
-    Node *next; // ponteiro para o proximo elemento
+struct Node{
+    int value;
+    Node * next {nullptr};
+    Node * anterior {nullptr};
 
-    // construtor do node
-    Node(int value, Node* next) {
-        this->value = value;
-        this->next = next;
+    Node(int value, Node* next = nullptr, Node* anterior = nullptr){
+        int value = value;
+        next = next;
+        anterior = anterior;
     }
+
 };
 
 #endif
+
